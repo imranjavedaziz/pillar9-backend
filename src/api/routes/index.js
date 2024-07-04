@@ -1,0 +1,10 @@
+const routes = require("express").Router();
+const authRoute = require("./auth");
+const kycRoute = require("./kyc");
+const userRoute = require("./user");
+const nftRoute = require("./nft");
+routes.use("/api/auth", authRoute);
+routes.use("/api/kyc", kycRoute);
+routes.use("/api/user", userRoute);
+routes.use("/api/nft", nftRoute);
+module.exports = routes;
